@@ -26,5 +26,6 @@
             ],
             "js": ["content.js"]
         }
-    ]
+    ],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6HvcVc+9OM2f6/TKKNRpwHaRBGKjW/wyePl5DXHIQmlHQ5rak1Gu10+NXOPEgdgorcq/H0voPUvNf999OnJCXximNY02a/2oq46ARjcxJcaHzyj69837W1iLPXDxuVLDixp1ytNkxn2u5hRiZnTOUeBS0hB3HEAMkYn+Z/oV6gTX+a6df3cliXJ+t3bD+UXYw071kDrp8NsIPUN4nMnUuCkYaNiCjFl7nfRqpee8nFbM9YrX020GaSJ4er6MHXzq+JYalKxDOhK4Mu8c536VfV4FCtUDIWJA+mTh9qKVL3jdPWL5Os2rtGGd9UU21FsxcrbAsIaeZvhtvvE3J3yPXQIDAQAB"
 }
