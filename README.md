@@ -19,12 +19,10 @@ Simplify and boost your savings with this Chrome extension! Effortlessly add Ame
 ## License
 
 ### Software
-The software in this repository is licensed under GPLv3.
+The software in this repository is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0).
 
 ### Images
-The images in this repository are licensed under CC BY-NC-ND 4.0.
-
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0)
+The images in this repository are licensed under [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0).
 
 #
 *Disclaimer: This extension is not affiliated with, endorsed by, or officially associated with American Express or Rakuten, or any of their subsidiaries or affiliates.*
