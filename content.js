@@ -37,6 +37,14 @@ async function addAmexOffers() {
 }
 
 async function addRakutenOffers() {
+    let failedOffers = 0;
+    async function clickCloseButton() {
+        const initialCloseButton = document.querySelector('.chakra-modal__close-btn.css-338l4');
+        if (initialCloseButton) {
+            initialCloseButton.click();
+            await new Promise(r => setTimeout(r, Math.random() * 1000 + 2000));
+        }
+    }
     async function clickSeeMoreButtons() {
         let seeMoreButtons = Array.from(document.querySelectorAll(".chakra-button.css-1an2tts"))
             .filter(button => button.textContent.trim() === "See More");
@@ -49,13 +57,37 @@ async function addRakutenOffers() {
     async function clickAddButtons() {
         let addButtons = Array.from(document.querySelectorAll(".chakra-button"))
             .filter(button => button.textContent.trim() === "Add" && !button.disabled);
+
         while (addButtons.length > 0) {
-            addButtons.pop().click();
-            await new Promise(r => setTimeout(r, Math.random() * 1000 + 6000));
+            const addButton = addButtons.pop();
+            let retries = 3;
+            while (retries > 0) {
+                addButton.click();
+                await new Promise(r => setTimeout(r, Math.random() * 1000 + 2000));
+                const popupCloseButton = document.querySelector('.chakra-modal__close-btn.css-5vo0te');
+                if (popupCloseButton) {
+                    popupCloseButton.click();
+                    await new Promise(r => setTimeout(r, Math.random() * 1000 + 2000));
+                    retries--;
+                    if (retries === 0) {
+                        failedOffers++;
+                    }
+                } else {
+                    await new Promise(r => setTimeout(r, Math.random() * 1000 + 4000));
+                    break;
+                }
+            }
         }
     }
+    await clickCloseButton();
     await clickSeeMoreButtons();
     await clickAddButtons();
     chrome.runtime.sendMessage({ "status": "completed", "action": "addRakutenOffers" });
-    alert("Completed! - No more offers to add.");
+    if (failedOffers == 0) {
+        alert("Completed! - All offers successfully added.");
+    } else if (failedOffers == 1) {
+        alert(`Completed! - ${failedOffers} offer could not be added.`);
+    } else {
+        alert(`Completed! - ${failedOffers} offers could not be added.`);
+    }
 }
