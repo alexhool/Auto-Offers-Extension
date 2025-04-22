@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: Copyright 2024-2025 Alexander Hool
+ */
+
 chrome.runtime.onMessage.addListener((request) => {
     if (request.action === "reloadAmex" && request.url) {
         chrome.tabs.query({}, (tabs) => {

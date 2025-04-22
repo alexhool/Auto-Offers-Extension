@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: Copyright 2024-2025 Alexander Hool
+ */
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "addAmexOffers" || request.action === "continueAmex") {
         addAmexOffers().then(() => {

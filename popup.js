@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: Copyright 2024-2025 Alexander Hool
+ */
+
 document.addEventListener("DOMContentLoaded", function () {
     const amexButton = document.getElementById("amexButton");
     const rakutenButton = document.getElementById("rakutenButton");
